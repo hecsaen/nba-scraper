@@ -14,7 +14,7 @@ from scrapy.utils.project import get_project_settings
 
 class BasketballReferencePipeline:
     def process_item(self, item, spider):
-        if item['type'] in ['boxscore', 'player_list', 'schedule']:
+        if item['type'] in ['boxscore', 'player_list', 'schedule', 'shot']:
             self.store_item_csv(item, spider)
 
         if item['type'] in ['player']:
