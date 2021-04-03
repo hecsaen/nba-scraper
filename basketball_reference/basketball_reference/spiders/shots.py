@@ -108,7 +108,6 @@ class ShotsSpider(scrapy.Spider):
 
 
                 html_class = shot.attrib['class']
-                print(html_class)
                 make = bool(re.search(r' make$', html_class))
                 player_id = re.search(r' p-([a-z]{1,7}[\d]{2}) ', html_class).group(1)
 
